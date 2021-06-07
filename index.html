@@ -12,8 +12,20 @@
         <h1 class="title">Sorting Algorithm Visualizer</h1>
         <div id="visual">
         </div>
-        <div>
+        <div class="controls">
+            <span>
+                <label>Algorithm:</label>
+                <select class="select-box" name="algs" id="algs">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="insert">Insertion Sort</option>
+                </select>
+            </span> 
             <button id='sort-btn'>Sort</button>
+            <span>
+                <label>Speed:</label>
+                <input type="range" min="0.1" max="1000" value="500" class="slider" id="speed-slider">
+            </span>
         </div> 
     </div>
     <script src="./sorting.js"></script>

@@ -20,7 +20,7 @@ function addElement(divSize) {
     newDiv.style.width = '7px';
     const newHeight = (divSize * 3).toString(10)
     newDiv.style.height = newHeight + 'px'
-    newDiv.style.backgroundColor = '#fc7753'
+    newDiv.style.backgroundColor = '#2274a5'
     newDiv.id = newHeight
     newDiv.classList.add('bar')
     containerDiv.classList.add('div-hover')
@@ -62,30 +62,35 @@ function updateDiv(idx1, idx2) {
     document.getElementById(height2).id = height1
     document.getElementById('num-' + height2).innerHTML = idx1
     document.getElementById('num-' + height2).id = 'num-' + height1
-
-
 }
 
 async function bubbleSortVisual(arr) {
     let temp = 0
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr.length - i; j++) {
+            sliderSpeed = (100 - document.getElementById('speed-slider').value)
             if (arr[j] > arr[j + 1]) {
                 temp = arr[j + 1]
                 arr[j + 1] = arr[j]
                 arr[j] = temp
                 updateDiv(arr[j], arr[j + 1])
-                await sleep(1)
             }
-            
+            await sleep(sliderSpeed)
         }
     }
 }
 
-// create a div for each number in the list
-nums.forEach(addElement)
+var sliderSpeed = 50
+
 
 // onclick event for sort button
 document.getElementById('sort-btn').onclick = function() {
     bubbleSortVisual(nums);
 }
+
+
+
+
+
+// create a div for each number in the list
+nums.forEach(addElement)
