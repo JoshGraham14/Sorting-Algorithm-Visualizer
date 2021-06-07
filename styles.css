@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background-color: #403d58;
+	color: #f2efea;
+}
+
+.title {
+	font-size: 3em;
+	color: #fcf9f4;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 10vh;
+}
+
+#visual {
+	background-color: #403d58;
+	border: 7px solid #66d7d1;
+	padding-left: 25px;
+	padding-right: 25px;
+	height: 55vh;
+	width: 85%;
+	margin: 2em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.bar-element {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 55vh;
+	position: relative;
+}
+
+.num-text {
+	display: none;
+	cursor: pointer;
+	position: absolute;
+	bottom: 5px;
+	font-size: 2em;
+}
+
+.bar-element:hover {
+	cursor: pointer;
+}
+
+.bar-element:hover .bar {
+	background-color: white;
+}
+
+.bar-element:hover .num-text {
+	display: block;
+}
+
+/* makes the bar scale up in size slightly*/
+.grow:hover .bar {
+	transform: scale(1.35);
+}
+
+#sort-btn {
+	display: inline-block;
+	padding: 0.5em 1.8em;
+	border: 0.1em solid #f2efea;
+	margin: 1 0.3em 0.3em 1;
+	border-radius: 0.12em;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1.5em;
+	background-color: #403d58;
+	color: #f2efea;
+	text-align: center;
+	transition: all 0.2s;
+}
+
+#sort-btn:hover {
+	color: #fff;
+	background-color: #242038;
+	cursor: pointer;
+}
